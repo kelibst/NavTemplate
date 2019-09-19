@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.hide_menu {
+  display: block; }
+
+.topNav_checkbox {
+  visibility: hidden; }
+
+.clearfix {
+  content: "";
+  display: table;
+  clear: both; }
+
+.topNav {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  background-image: linear-gradient(to right bottom, #00000091, #000000a6), url(img/header-bg.jpg);
+  background-size: cover;
+  background-position: top; }
+  .topNav_icon_transparent {
+    background: transparent; }
+  .topNav_icon_rotate_top {
+    display: inline-block;
+    top: 0;
+    transform: rotate(135deg); }
+  .topNav_icon_rotate_down {
+    top: 0;
+    transform: rotate(-135deg); }
+  .topNav_brand {
+    text-decoration: none;
+    color: white;
+    font-size: 3em;
+    display: block;
+    transition: all .4s;
+    text-align: center;
+    margin: 15vh;
+    text-transform: uppercase;
+    text-shadow: 5px 10px 20px rgba(0, 0, 0, 0.8); }
+    .topNav_brand:hover,
+    .topNav_brand :focus {
+      transform: translateY(-3px);
+      text-shadow: 5px 10px 20px rgba(0, 0, 0, 0.4); }
+    .topNav_brand:active {
+      transform: translateY(2px);
+      text-shadow: 5px 10px 20px rgba(0, 0, 0, 0.8); }
+  .topNav_Ul {
+    width: 100%;
+    text-align: center;
+    padding: 25px;
+    background-color: rgba(128, 128, 128, 0.8);
+    width: 50%;
+    border-radius: 25px;
+    margin: 0 auto;
+    display: none; }
+  .topNav_li {
+    display: inline-block;
+    margin-right: 10px;
+    list-style: none;
+    text-align: center; }
+    .topNav_li a,
+    .topNav_li :link,
+    .topNav_li :visited {
+      color: white;
+      text-decoration: none;
+      padding: 20px; }
+      .topNav_li a:hover,
+      .topNav_li :link:hover,
+      .topNav_li :visited:hover {
+        background: green; }
+  .topNav_button {
+    background: white;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    text-align: center;
+    display: inline-block;
+    position: fixed;
+    top: 15px;
+    right: 0; }
+    .topNav_button--container {
+      margin-top: 22px;
+      position: absolute;
+      display: inline-block;
+      right: 7px; }
+  .topNav_icon {
+    position: relative; }
+    .topNav_icon, .topNav_icon_before, .topNav_icon_after {
+      width: 20px;
+      height: 2px;
+      background: black;
+      display: inline-block;
+      z-index: 8;
+      transition: all .4s; }
+    .topNav_icon_before, .topNav_icon_after {
+      content: "";
+      position: relative;
+      left: 0; }
+    .topNav_icon_before {
+      top: -8px; }
+    .topNav_icon_after {
+      top: 8px; }
+  .topNav_button:hover .topNav_icon_before {
+    top: -6px; }
+  .topNav_button:hover .topNav_icon_after {
+    top: 6px; }
+  .topNav_checkbox:checked + .topNav_button .topNav_icon {
+    background: transparent; }
+  .topNav_checkbox:checked + .topNav_button .topNav_icon_before {
+    top: 2;
+    transform: rotate(135deg); }
+  .topNav_checkbox:checked + .topNav_button .topNav_icon_after {
+    top: -3;
+    transform: rotate(-135deg); }
+
+@media screen and (max-width: 400px) {
+  .topNav_brand {
+    font-size: 1.5em; }
+  .topNav_Ul {
+    background: transparent;
+    width: 100%;
+    border-radius: 0; }
+  .topNav_li {
+    display: block;
+    padding: 10px; }
+    .topNav_li:hover {
+      outline: none; }
+  .topNav_button {
+    width: 30px;
+    height: 30px; }
+    .topNav_button--container {
+      margin-top: 13px;
+      position: absolute;
+      display: inline-block;
+      right: 4px; }
+  .topNav_icon, .topNav_icon_before, .topNav_icon_after {
+    width: 15px; }
+  .topNav_icon_before {
+    top: -4px; }
+  .topNav_icon_after {
+    top: 4px; }
+  .topNav_icon_button_hover .topNav_icon_icon_before {
+    top: -3px; }
+  .topNav_icon_button_hover .topNav_icon_icon_after {
+    top: 3px; } }
